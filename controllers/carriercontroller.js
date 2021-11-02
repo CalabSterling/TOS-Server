@@ -18,11 +18,7 @@ router.post("/create", validateSession, function (req, res) {
 
 router.get("/select", validateSession, async function (req, res) {
   try{
-    Carrier.findOne(
-      {where:{
-          name: req.body.carrier.name
-        }
-      })
+    Carrier.findAll()
       .then((carrier) => res.status(200).json(carrier))
   }catch(e){
     res.status(500).json({message: e.message})

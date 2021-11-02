@@ -5,6 +5,7 @@ const Carrier = db.define("carrier" ,{
     name: {
         type: DataTypes.STRING,
         allowNull: false,
+        unique: true,
     }
 })
 

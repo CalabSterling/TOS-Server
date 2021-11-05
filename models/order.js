@@ -3,11 +3,11 @@ const db = require("../db");
 
 const Order = db.define("order" ,{
     pickupSite: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
     },
     dropoffSite: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
     },
     pickupDate: {

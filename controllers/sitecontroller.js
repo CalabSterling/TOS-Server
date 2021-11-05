@@ -23,11 +23,7 @@ router.post("/create", validateSession, function (req, res) {
 
 router.get("/select", validateSession, async function (req, res) {
   try{
-    Site.findOne(
-      {where:{
-          name: req.body.site.name
-        }
-      })
+    Site.findAll()
       .then((site) => res.status(200).json(site))
   }catch(e){
     res.status(500).json({message: e.message})

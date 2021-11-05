@@ -12,7 +12,7 @@ const Site = db.define("site" ,{
     },
     address2: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     city: {
         type: DataTypes.STRING,
@@ -23,7 +23,7 @@ const Site = db.define("site" ,{
         allowNull: false,
     },
     zipCode: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false,
     },
     customerId: {

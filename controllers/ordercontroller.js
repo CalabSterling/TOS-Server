@@ -28,11 +28,7 @@ router.post("/create", validateSession, function (req, res) {
 
 router.get("/select", validateSession, async function (req, res) {
   try{
-    Order.findOne(
-      {where:{
-          referenceNumber: req.body.order.referenceNumber
-        }
-      })
+    Order.findAll()
       .then((order) => res.status(200).json(order))
   }catch(e){
     res.status(500).json({message: e.message})

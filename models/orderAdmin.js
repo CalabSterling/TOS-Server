@@ -19,7 +19,7 @@ const OrderAdmin = db.define("orderadmin" ,{
         allowNull: true,
     },
     pickupTime: {
-        type: DataTypes.TIME,
+        type: DataTypes.INTEGER,
         allowNull: false,
     },
     orderId: {

@@ -1,4 +1,4 @@
-const CorsMiddleware = (req, res, next) => {
+const CORS = (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Methods", "POST, PUT, GET, DELETE, OPTIONS");
   res.header(
@@ -8,4 +8,4 @@ const CorsMiddleware = (req, res, next) => {
   return next();
 };
 
-module.exports = CorsMiddleware;
+module.exports = CORS;

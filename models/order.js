@@ -38,10 +38,6 @@ const Order = db.define("order" ,{
     tempSet: {
         type: DataTypes.INTEGER,
         allowNull: true,
-    },
-    customerId: {
-        type: DataTypes.INTEGER,
-        allowNull: false
     }
 })
 

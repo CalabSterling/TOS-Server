@@ -25,10 +25,6 @@ const Site = db.define("site" ,{
     zipCode: {
         type: DataTypes.STRING,
         allowNull: false,
-    },
-    customerId: {
-        type: DataTypes.INTEGER,
-        allowNull: false
     }
 })
 

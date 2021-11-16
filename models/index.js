@@ -7,9 +7,6 @@ const OrderAdmin = require("./orderAdmin");
 
 // Setup Associations
 OrderAdmin.belongsTo(Order);
-Order.belongsTo(Customer);
-Customer.hasMany(User);
-Site.belongsTo(Customer);
 Carrier.hasOne(OrderAdmin)
 
 //Customer.hasMany(Order);

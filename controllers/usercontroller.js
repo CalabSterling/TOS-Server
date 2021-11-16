@@ -14,7 +14,6 @@ router.post("/create", function (req, res) {
       username: req.body.user.username,
       password: bcrypt.hashSync(req.body.user.password, 15),
       role: req.body.user.role,
-      customerId: req.body.user.customerId
     })
     .then(
       function createSuccessful(user) {

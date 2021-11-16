@@ -19,7 +19,6 @@ router.post("/create", validateSession, function (req, res) {
       palletCount: req.body.order.palletCount,
       weight: req.body.order.weight,
       tempSet: req.body.order.tempSet,
-      customerId: req.body.order.customerId
     })
     .then((order) => res.status(200).json(order))
     .catch(err => res.status(500).json({message: err}))
@@ -47,7 +46,6 @@ router.put('/update/:id', validateSession, function (req, res) {
       palletCount: req.body.order.palletCount,
       weight: req.body.order.weight,
       tempSet: req.body.order.tempSet,
-      customerId: req.body.order.customerId
     }
   
     const query = {where: {id: req.params.id}};

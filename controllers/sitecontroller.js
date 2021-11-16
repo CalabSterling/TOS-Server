@@ -14,7 +14,6 @@ router.post("/create", validateSession, function (req, res) {
       city: req.body.site.city,
       state: req.body.site.state,
       zipCode: req.body.site.zipCode,
-      customerId: req.body.site.customerId
     })
     .then((site) => res.status(200).json(site))
     .catch(err => res.status(500).json({message: err}))
@@ -39,7 +38,6 @@ router.put('/update/:id', validateSession, function (req, res) {
     city: req.body.site.city,
     state: req.body.site.state,
     zipCode: req.body.site.zipCode,
-    customerId: req.body.site.customerId
   }
 
   const query = {where: {id: req.params.id}};
